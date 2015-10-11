@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="paneData" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;" stylesheets="@../css/Metro-UI.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.CourseController">
+    <children>
+        <Button fx:id="btNew" defaultButton="true" layoutX="681.0" layoutY="19.0" mnemonicParsing="false" onAction="#addNew" prefHeight="32.0" prefWidth="108.0" styleClass="btn" text="New Data" />
+        <Text fill="#2b579a" layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Management" wrappingWidth="372.3828125">
+            <font>
+                <Font name="Segoe UI Semilight" size="39.0" />
+            </font>
+        </Text>
+        <AnchorPane fx:id="paneCrud" layoutX="1.0" layoutY="109.0" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="btBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionBack" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/buttonCircleBlack.css">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/arrowLeftBlack.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label alignment="CENTER_RIGHT" layoutX="54.0" layoutY="70.0" prefHeight="17.0" prefWidth="80.0" text="*Course ID :" textFill="#b22121" />
+                <TextField fx:id="tfId" layoutX="150.0" layoutY="65.0" />
+                <Label layoutX="66.0" layoutY="125.0" text="Class Name:" />
+                <TextField fx:id="tfClassId" layoutX="151.0" layoutY="120.0" />
+                <Label layoutX="56.0" layoutY="179.0" text="Teacher Email:" />
+                <TextField fx:id="tfTeacherEmail" layoutX="150.0" layoutY="174.0" />
+                <TextField fx:id="tfSubjectId" layoutX="150.0" layoutY="228.0" />
+                <Label layoutX="74.0" layoutY="233.0" text="Subject ID:" />
+                <Button fx:id="btSave" layoutX="204.0" layoutY="496.0" mnemonicParsing="false" onAction="#actionSave" prefHeight="27.0" prefWidth="98.0" styleClass="btn" text="Add" />
+                <Label layoutX="75.0" layoutY="288.0" text="Start Date:" />
+                <Label layoutX="75.0" layoutY="348.0" text="End Date:" />
+                <Label layoutX="74.0" layoutY="395.0" text="Time Slot:" />
+                <DatePicker fx:id="tfStartDate" layoutX="150.0" layoutY="282.0" showWeekNumbers="true" style="-fx-background-color: white;" />
+                <Group layoutX="151.0" layoutY="395.0">
+                    <children>
+                        <RadioButton fx:id="radMorning" mnemonicParsing="false" selected="true" text="7AM - 11AM">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="podRadio" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radAfternoon" layoutY="40.0" mnemonicParsing="false" text="1PM - 5PM" toggleGroup="$podRadio" />
+                    </children>
+                </Group>
+                <DatePicker fx:id="tfEndDate" disable="true" layoutX="150.0" layoutY="342.0" promptText="Auto Generated" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="paneTable" layoutY="66.0" opacity="0.0" prefHeight="616.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+            <children>
+                <TableView fx:id="tableData" layoutY="2.0" prefHeight="550.0" prefWidth="810.0" AnchorPane.rightAnchor="-3.0">
+                    <columns>
+                        <TableColumn fx:id="colCourseId" prefWidth="96.0" text="Course ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colClassId" prefWidth="104.0" text="Class Name">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colTeacherId" prefWidth="141.0" text="Teacher Email">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colSubjectId" prefWidth="105.0" text="Subject ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colDate" prefWidth="358.0" text="                                          Date and Time">
+                            <columns>
+                                <TableColumn fx:id="colStartDate" prefWidth="131.0" text="Start Date">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="colEndDate" prefWidth="122.0" text="End Date">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="colPod" prefWidth="106.0" text="Time Slot">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Text fill="#2b579a" layoutX="14.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" wrappingWidth="79.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="23.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tfSearch" layoutX="111.0" layoutY="565.0" prefHeight="27.0" prefWidth="212.0" promptText="Enter info to search" />
+                <ComboBox fx:id="cbSearch" layoutX="353.0" layoutY="565.0" prefHeight="27.0" prefWidth="171.0" promptText="Search by..." />
+                <Button fx:id="btDelete" defaultButton="true" layoutX="675.0" layoutY="562.0" mnemonicParsing="false" onAction="#actionDelete" prefHeight="32.0" prefWidth="108.0" styleClass="btn" text="Delete" />
+                <Separator layoutY="550.0" prefHeight="3.0" prefWidth="810.0" />
+                <ProgressBar fx:id="pgBar" layoutY="595.0" prefHeight="5.0" prefWidth="810.0" progress="0.0" AnchorPane.bottomAnchor="4.0" AnchorPane.topAnchor="595.0" />
+            </children>
+        </AnchorPane>
+        <Separator layoutY="65.0" prefHeight="6.0" prefWidth="810.0" AnchorPane.topAnchor="71.0" />
+    </children>
+</AnchorPane>

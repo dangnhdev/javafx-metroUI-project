@@ -1,0 +1,49 @@
+.btn {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: none; 
+    -fx-background-radius: 0;
+    -fx-border-color : transparent;
+/*    -fx-border-width:2;*/
+    -fx-background-color: #299bb4;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+}
+ 
+
+ 
+.btn:pressed, .btn:default:hover:pressed
+{
+  -fx-background-color: black;
+  -fx-text-fill: white;
+}
+ 
+.btn:focused
+{
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
+}
+ 
+.btn:disabled, .btn:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #212121;
+}
+ 
+.btn:default
+{
+    -fx-background-color: #5585be;
+    -fx-text-fill: #ffffff;
+}
+ 
+.btn:default:hover{
+    -fx-background-color: #219297;
+}
+
+#btStudent:hover{
+	-fx-background-color: green;
+}

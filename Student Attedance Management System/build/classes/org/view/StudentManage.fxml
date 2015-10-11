@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="paneData" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;" stylesheets="@../css/Metro-UI.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.StudentManageController">
+    <children>
+        <AnchorPane fx:id="paneTable" layoutX="8.0" layoutY="73.0" prefHeight="610.0" prefWidth="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <children>
+                <TableView fx:id="tableData" layoutY="-2.0" prefHeight="540.0" prefWidth="810.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="120.0" text="ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colName" prefWidth="250.0" text="Name">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colEmail" prefWidth="240.0" text="Email">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colClass" prefWidth="200.0" text="Class">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Text fill="#2b579a" layoutX="14.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" wrappingWidth="79.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="23.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="tfSearch" layoutX="113.0" layoutY="552.0" prefHeight="27.0" prefWidth="212.0" promptText="Enter info to search" />
+                <ComboBox fx:id="cbSearch" layoutX="353.0" layoutY="553.0" prefHeight="27.0" prefWidth="171.0" promptText="Search by..." />
+                <Button fx:id="btDelete" defaultButton="true" layoutX="674.0" layoutY="551.0" mnemonicParsing="false" onAction="#actionDelete" prefHeight="32.0" prefWidth="108.0" styleClass="btn" text="Delete" />
+                <Separator layoutX="-7.0" layoutY="535.0" prefHeight="3.0" prefWidth="800.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="paneCrud" layoutY="69.0" opacity="0.0" prefHeight="610.0" prefWidth="810.0" style="-fx-background-color: white;" AnchorPane.topAnchor="67.0">
+            <children>
+                <Button fx:id="btBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionBack" prefHeight="40.0" prefWidth="40.0" stylesheets="@../css/buttonCircleBlack.css">
+                    <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/arrowLeftBlack.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label alignment="CENTER_RIGHT" layoutX="54.0" layoutY="70.0" prefHeight="17.0" prefWidth="80.0" text="*Student ID :" textFill="#b22121" />
+                <TextField fx:id="tfId" layoutX="150.0" layoutY="65.0" />
+                <Label layoutX="54.0" layoutY="125.0" text="Student Name:" />
+                <TextField fx:id="tfName" layoutX="151.0" layoutY="120.0" />
+                <Label layoutX="56.0" layoutY="179.0" text="Student Email:" />
+                <TextField fx:id="tfEmail" layoutX="150.0" layoutY="174.0" />
+                <TextField fx:id="tfClassId" layoutX="150.0" layoutY="232.0" />
+                <Label layoutX="102.0" layoutY="237.0" text="Class:" />
+                <Button fx:id="btSave" layoutX="204.0" layoutY="295.0" mnemonicParsing="false" onAction="#actionSave" prefHeight="27.0" prefWidth="98.0" styleClass="btn" text="Save" />
+            </children>
+        </AnchorPane>
+        <Button fx:id="btNew" defaultButton="true" layoutX="681.0" layoutY="19.0" mnemonicParsing="false" onAction="#addNew" prefHeight="32.0" prefWidth="108.0" styleClass="btn" text="New Data" />
+        <Text fill="#2b579a" layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management" wrappingWidth="372.3828125">
+            <font>
+                <Font name="Segoe UI Semilight" size="39.0" />
+            </font>
+        </Text>
+        <Separator layoutX="1.0" layoutY="69.0" prefHeight="0.0" prefWidth="810.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPageBac" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="810.0" stylesheets="@../css/Metro-UI.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator layoutY="110.0" prefHeight="0.0" prefWidth="810.0" />
+      <Button fx:id="btStudent" defaultButton="true" layoutX="314.0" layoutY="339.0" mnemonicParsing="false" prefHeight="129.0" prefWidth="220.0" style="-fx-background-color: #F0B922;" styleClass="btn" stylesheets="@../css/labelCss.css" text="                    Student: 1000">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="btClass" defaultButton="true" layoutX="314.0" layoutY="184.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #E3541B;" styleClass="btn" stylesheets="@../css/labelCss.css" text="            Classes:">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="btCourse" defaultButton="true" layoutX="39.0" layoutY="185.0" mnemonicParsing="false" prefHeight="281.0" prefWidth="250.0" style="-fx-background-color: #2AAAD1;" styleClass="btn" stylesheets="@../css/labelCss.css" text="                         Course:13124">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="btTeacher" defaultButton="true" layoutX="563.0" layoutY="336.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #40B0C9;" styleClass="btn" stylesheets="@../css/labelCss.css" text="              Teacher:">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="btSubject" defaultButton="true" layoutX="563.0" layoutY="184.0" mnemonicParsing="false" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #06D168;" styleClass="btn" stylesheets="@../css/labelCss.css" text="             Subject:">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="110.0" fitWidth="143.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/fptlogo.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="167.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FPT Education" wrappingWidth="192.99998884648085">
+         <font>
+            <Font name="Segoe UI Semilight" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="167.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Attendance Management System" wrappingWidth="395.99998884648085">
+         <font>
+            <Font name="Segoe UI Semilight" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblWelcome" fill="WHITE" layoutX="167.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="395.99998884648085">
+         <font>
+            <Font name="Segoe UI Semilight" size="22.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="335.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/internships.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="82.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/all-course-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="594.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/circle-school-learn-study-subject-literature-book-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="594.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/teacher.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="335.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/class.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

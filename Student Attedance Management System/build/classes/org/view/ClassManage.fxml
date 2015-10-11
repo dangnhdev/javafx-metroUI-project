@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="paneData" minHeight="0.0" minWidth="0.0" prefHeight="678.0"
+            prefWidth="810.0" style="-fx-background-color: white;"
+            stylesheets="@../css/Metro-UI.css" xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="org.controller.StudentManageController">
+    <children>
+        <AnchorPane fx:id="paneTable" layoutX="8.0" layoutY="73.0" prefHeight="603.0" prefWidth="796.0">
+            <children>
+                <Text fill="#2b579a" layoutX="14.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Search:" wrappingWidth="79.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="23.0"/>
+                    </font>
+                </Text>
+                <ListView layoutX="14.0" layoutY="35.0" prefHeight="499.0" prefWidth="152.0"/>
+                <TextField fx:id="tfSearch" layoutX="113.0" layoutY="552.0" prefHeight="27.0" prefWidth="212.0"
+                           promptText="Enter info to search"/>
+                <ComboBox fx:id="cbSearch" layoutX="353.0" layoutY="553.0" prefHeight="27.0" prefWidth="171.0"
+                          promptText="Search by..."/>
+                <Button fx:id="btDelete" defaultButton="true" layoutX="664.0" layoutY="551.0" mnemonicParsing="false"
+                        onAction="#actionDelete" prefHeight="32.0" prefWidth="118.0" styleClass="btn"
+                        text="Delete Class"/>
+                <Separator layoutX="-7.0" layoutY="535.0" prefHeight="3.0" prefWidth="810.0"/>
+                <Text fill="#2b579a" layoutX="62.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class "
+                      wrappingWidth="61.000006914138794">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="24.0"/>
+                    </font>
+                </Text>
+                <Text fill="#2b579a" layoutX="318.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Student" wrappingWidth="87.0000069141388">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="24.0"/>
+                    </font>
+                </Text>
+                <Text fill="#2b579a" layoutX="623.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Teacher" wrappingWidth="87.0000069141388">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="24.0"/>
+                    </font>
+                </Text>
+                <TableView layoutX="226.0" layoutY="35.0" prefHeight="499.0" prefWidth="272.0">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="89.0" text="ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colName" prefWidth="182.0" text="Name">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <TableView layoutX="524.0" layoutY="35.0" prefHeight="499.0" prefWidth="272.0">
+                    <columns>
+                        <TableColumn fx:id="colId1" prefWidth="89.0" text="ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colName1" prefWidth="182.0" text="Name">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="btNew" defaultButton="true" layoutX="681.0" layoutY="19.0" mnemonicParsing="false"
+                onAction="#addNew" prefHeight="32.0" prefWidth="108.0" styleClass="btn" text="New Data"/>
+        <Separator layoutX="1.0" layoutY="69.0" prefHeight="0.0" prefWidth="810.0"/>
+        <Text fill="#2b579a" layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Class Management" wrappingWidth="331.3828125">
+            <font>
+                <Font name="Segoe UI Semilight" size="39.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

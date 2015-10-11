@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="paneData" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;" stylesheets="@../css/Metro-UI.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.AttendanceReportController">
+    <children>
+        <AnchorPane fx:id="paneTable" layoutX="-2.0" layoutY="68.0" prefHeight="619.0" prefWidth="814.0">
+            <children>
+                <Button fx:id="btSave" defaultButton="true" layoutX="436.0" layoutY="551.0" mnemonicParsing="false" onAction="#actionSave" prefHeight="32.0" prefWidth="116.0" styleClass="btn" text="Save" />
+                <TableView fx:id="tableData" layoutX="2.0" prefHeight="608.0" prefWidth="405.0">
+                    <columns>
+                        <TableColumn fx:id="colStudentId" prefWidth="115.0" text="Student ID">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colStudentName" prefWidth="184.0" text="Student Name">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                        <TableColumn fx:id="colStatus" prefWidth="105.0" text="Status">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/tabel.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Text fill="#2b579a" layoutX="448.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher:" wrappingWidth="61.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lbTeacher" fill="#2b579a" layoutX="552.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#2b579a" layoutX="448.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class:" wrappingWidth="61.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#2b579a" layoutX="448.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course:" wrappingWidth="61.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lbClass" fill="#2b579a" layoutX="552.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lbCourse" fill="#2b579a" layoutX="564.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#2b579a" layoutX="448.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Slot: " wrappingWidth="68.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Text fx:id="lbTimeSlot" fill="#2b579a" layoutX="552.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+                <Separator layoutX="407.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="5.0" />
+                <Text fx:id="lbDayPerPeriod" fill="#2b579a" layoutX="552.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="167.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <Text fill="#2b579a" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance Report" wrappingWidth="329.3828125">
+            <font>
+                <Font name="Segoe UI Semilight" size="39.0" />
+            </font>
+        </Text>
+        <Separator layoutX="-2.0" layoutY="70.0" prefHeight="3.0" prefWidth="810.0" />
+      <Text fx:id="lbDateTime" fill="#2b579a" layoutX="480.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="307.3828125">
+         <font>
+            <Font name="Segoe UI Semilight" size="30.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

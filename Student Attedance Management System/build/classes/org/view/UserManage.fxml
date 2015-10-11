@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.UserManageController">
+    <children>
+        <AnchorPane fx:id="paneData" layoutX="5.0" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;" stylesheets="@../css/Metro-UI.css" AnchorPane.leftAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="paneTable" layoutY="72.0" prefHeight="608.0" prefWidth="566.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="60.0">
+                    <children>
+                        <TableView fx:id="tableData" layoutY="-6.0" prefHeight="557.0" prefWidth="568.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="colUsername" prefWidth="150.0" text="Username">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="colEmail" prefWidth="250.0" text="Email">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                                <TableColumn fx:id="colLevel" prefWidth="164.0" text="Level">
+                                    <graphic>
+                                        <ImageView fitHeight="30.0" fitWidth="28.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../img/tabel.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <Text fill="#2b579a" layoutX="14.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:" wrappingWidth="79.3828125">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="23.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="tfSearch" layoutX="93.0" layoutY="570.0" prefHeight="27.0" prefWidth="178.0" promptText="Enter info to search" />
+                        <ComboBox fx:id="cbSearch" layoutX="284.0" layoutY="570.0" prefHeight="27.0" prefWidth="171.0" promptText="Search by..." />
+                        <Separator layoutX="2.0" layoutY="556.0" prefHeight="3.0" prefWidth="566.0" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" />
+                        <Button fx:id="btDelete" defaultButton="true" layoutX="468.0" layoutY="569.0" mnemonicParsing="false" onAction="#actionDelete" prefHeight="27.0" prefWidth="86.0" styleClass="btn" text="Delete" />
+                    </children>
+                </AnchorPane>
+                <Text fill="#2b579a" layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management" wrappingWidth="315.3828125">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="39.0" />
+                    </font>
+                </Text>
+                <Separator layoutY="67.0" prefWidth="810.0" AnchorPane.bottomAnchor="616.0" />
+                <AnchorPane fx:id="inputPane" layoutX="529.0" layoutY="70.0" prefHeight="616.0" prefWidth="240.0" style="-fx-border-color: white white white #cccccc;" AnchorPane.leftAnchor="565.0" AnchorPane.topAnchor="60.0">
+                    <children>
+                        <Text fill="#2b579a" layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input Data">
+                            <font>
+                                <Font name="Segoe UI Semilight" size="24.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="42.0" text="Username" textFill="#9a3434" />
+                        <TextField fx:id="tfUsername" layoutX="12.0" layoutY="66.0" prefHeight="27.0" prefWidth="198.0" />
+                        <Label layoutX="12.0" layoutY="107.0" text="Password" />
+                        <Label layoutX="14.0" layoutY="177.0" text="Email" />
+                        <TextField fx:id="tfEmail" layoutX="12.0" layoutY="202.0" prefHeight="27.0" prefWidth="198.0" />
+                        <Button fx:id="btAdd" defaultButton="true" layoutX="11.0" layoutY="319.0" mnemonicParsing="false" onAction="#actionAdd" prefHeight="29.0" prefWidth="86.0" styleClass="btn" text="Add" />
+                        <PasswordField fx:id="tfPassword" layoutX="12.0" layoutY="138.0" prefHeight="27.0" prefWidth="198.0" />
+                        <RadioButton fx:id="rd1" layoutX="20.0" layoutY="266.0" mnemonicParsing="false" text="1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="groupLevel" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rd2" layoutX="94.0" layoutY="266.0" mnemonicParsing="false" text="2" toggleGroup="$groupLevel" />
+                        <RadioButton fx:id="rd3" layoutX="167.0" layoutY="266.0" mnemonicParsing="false" selected="true" text="3" toggleGroup="$groupLevel" />
+                        <Label layoutX="15.0" layoutY="237.0" text="Level" />
+                  <Button fx:id="btUpdate" defaultButton="true" layoutX="128.0" layoutY="319.0" mnemonicParsing="false" onAction="#actionUpdate" prefHeight="29.0" prefWidth="86.0" styleClass="btn" text="Update" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
